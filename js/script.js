@@ -41,8 +41,8 @@ $(".main_text, .menu_link").on("click","a", function (event) {
         $('.android').removeClass('disabled');
         $('.ios_title').css('opacity','1');
         $('.android_title').css('opacity','0');
-        $('header .menu_link').css('color','#fff');
-        $('header .logo').css('filter', 'invert(1)');
+        $('.menu_link a').css('color','#fff');
+        $('.logo').css('filter', 'invert(1)');
         $('.android_arrow').fadeOut(200);
         $('.mask2').css('z-index', 'auto');
  });
@@ -52,8 +52,8 @@ $(".main_text, .menu_link").on("click","a", function (event) {
         $('.ios').removeClass('disabled');
         $('.ios_title').css('opacity','0');
         $('.android_title').css('opacity','1');
-        $('header .menu_link').css('color','#000');
-        $('header .logo').css('filter', 'invert(0)');
+        $('.menu_link a').css('color','#000');
+        $('.logo').css('filter', 'invert(0)');
         $('.android_arrow').fadeIn(200);
  });
 } else {
@@ -63,7 +63,7 @@ $(".main_text, .menu_link").on("click","a", function (event) {
         $('.android').removeClass('disabled');
         $('.ios_title').css('opacity','1');
         $('.android_title').css('opacity','0');
-        $('.menu_link').css('color','#fff');
+        $('.menu_link a').css('color','#fff');
         $('.logo').css('filter', 'invert(1)');
         $('.android_arrow').fadeOut(200);
  });
@@ -73,7 +73,7 @@ $(".main_text, .menu_link").on("click","a", function (event) {
         $('.ios').removeClass('disabled');
         $('.ios_title').css('opacity','0');
         $('.android_title').css('opacity','1');
-        $('.menu_link').css('color','#000');
+        $('.menu_link a').css('color','#000');
         $('.logo').css('filter', 'invert(0)');
         $('.android_arrow').fadeIn(200);
  });

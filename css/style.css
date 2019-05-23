@@ -37,6 +37,7 @@ header .menu_links{
 }
 header .menu_link a{
 	color: #000;
+	transition: .3s all ease;
 }
 header .menu_link{
 	font-size: 2vmin;
