@@ -1,0 +1,614 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+}
+html,body {
+    margin:0;
+    padding:0;
+    height:100%; 
+    overflow-x: hidden;
+}
+section{
+	padding: 50px 0;
+}
+header{
+	/*position: absolute;*/
+	top: 2%;
+	left: 65%;
+	z-index:9999;
+	width: 100%;
+	position: absolute;
+	transform: translate(-50%,0%);
+	padding: 10px;
+	/*background-color: rgba(254, 242, 10, .8);*/
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.col{
+	display: flex;
+	flex-direction: column;
+}
+header .menu_links{
+	align-items: center;
+}
+header .menu_link a{
+	color: #000;
+}
+header .menu_link{
+	font-size: 2vmin;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	color: #000;
+	margin: 0 30px;
+	padding: 5px 10px; 
+	cursor: pointer;
+	border-bottom: 3px solid rgba(255, 187, 0, 0);
+	transition: .3s all ease;
+}
+header .menu_link:hover{
+	border-bottom: 3px solid rgba(255, 187, 0, 1);
+}
+.logo{
+	transition: .3s all ease;
+}
+.main_screen{
+	width: 100%;
+	min-height:100%;
+	position: relative;
+	overflow:hidden;
+}
+.ios{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height:100%;
+	background-image: url(../img/ios_devices.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	transition: .3s all ease;
+	z-index: 10;
+}
+.android{
+	position: absolute;
+	top: 0;
+	left: 90%;
+	width: 100%;
+	min-height:100%;
+	background-image: url(../img/android_devices.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	transition: .3s all ease;
+	z-index:11;
+
+}
+.disabled{
+	cursor: pointer;
+}
+.mask1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 221, 0, .8);
+	width: 100%;
+	min-height:100%;
+	/*z-index: -1;*/
+	transition: .3s all ease;
+	opacity: 0;
+}
+.mask2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 221, 0, .8);
+	width: 100%;
+	min-height:100%;
+	/*z-index: -1;*/
+	transition: .3s all ease;
+	opacity: 1;
+}
+.container{
+	position: relative;
+	z-index: 999;
+}
+.main_text{
+	background-color: rgba(0,0,0,.8);
+	padding: 0px 45px 65px 45px;
+	border-top: 30px solid #FFBB00;
+	max-width: 630px;
+	position: absolute;
+	top: 20vh;
+	left: 15vw;
+}
+.main_text h1,h2{
+	margin: 20px 0;
+}
+.ios_title, .android_title{
+	position: absolute;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 12vmin;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+	transition: .3s all ease;
+}
+.ios_title{
+	left: 4.5%;
+	opacity: 0;
+}
+.android_title{
+	left: 5%;
+	opacity: 1;
+}
+.android_arrow{
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	z-index: 9999;
+	position: absolute;
+	bottom: 10%;
+	left: 1%;
+	color: #fff;
+	align-items: center;
+	border-bottom: 2px solid #fff;
+}
+.android_arrow *{
+	margin: 2px;
+}
+h1{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 70px;
+	color: white;
+}
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	color: white;
+}
+.main_button{
+	background: linear-gradient(to right, #FFBB00, #E9E200);
+	padding: 15px 40px ;
+	border-radius: 25px;
+	border: none;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: white;
+	transition: .3s all ease;
+	outline: none;
+}
+.link{
+	margin: 20px;
+}
+.main_button:hover{
+	color: #000;
+	cursor: pointer;
+}
+.container_1366{
+	max-width: 1366px;
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+}
+.device{
+	align-items: flex-start;
+}
+.price_title{
+	margin: 20px 0 60px 0;
+}
+.price_title p{
+	font-size: 65px;
+	font-weight: 500;
+	border-bottom: 5px solid #000;
+	display: inline-block;
+}
+.title p{
+	font-size: 65px;
+	font-weight: 500;
+	/*border-bottom: 5px solid #000;*/
+	text-align: center;
+	margin: 20px;
+}
+.device_category{
+	margin: 20px;
+}
+.category{
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;	
+	margin-bottom: 40px; 
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	text-align: left;
+}
+.category p{
+	display: inline-block;
+	border-bottom: 3px solid rgba(0,0,0,0);
+	transition: .3s all ease;
+}
+.category p:hover{
+	border-bottom: 3px solid rgba(0,0,0,1);
+}
+.device_number{
+	justify-content: space-around;
+	/*margin: 10px;*/
+	font-size: 18px;
+	font-weight: 500;
+	transform: translateY(20px);
+	z-index: 9999;
+}
+.number{
+	cursor: pointer;
+	transition: .3s all ease;
+	padding: 10px 10px 20px 10px;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	font-size: 18px;
+	font-weight: 500;
+}
+.number:hover{
+	background-color: #FFBB00;
+	color: #fff;
+}
+.device_title{
+	text-align: center;
+	/*margin: 10px;*/
+	padding: 20px;
+	font-size: 24px;
+	font-weight: 500;
+	filter: drop-shadow(0 0 5px rgba(0,0,0,.1));
+	/*border: 2px solid red;*/
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 10px;
+}
+.device_repairs{
+	/*margin: 10px;*/
+	/*justify-content: space-between;	*/
+}
+.device_repairs_price{
+	transition: .3s all ease;
+	justify-content: space-between;
+}
+.device_repairs_price p{
+	padding: 20px;	
+}
+.device_repairs_price:hover{
+	background-color: rgba(0, 85, 255, .1);
+}
+.device_repairs .col{
+	filter: drop-shadow(0 0 5px rgba(0,0,0,.1));
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 10px;
+	/*width: 4%;*/
+}
+.device_photo img{
+	padding: 20px 40px;
+	width: 291px;
+}
+.device_photo_info{
+	align-items: flex-start;
+}
+.advantages{
+	justify-content: space-around;
+}
+.advantage{
+	flex: 1 0 calc(33.333% - 20px);
+	align-items: center;
+	justify-content: center;
+	margin: 50px 0;
+}
+.advantage_work{
+	/*flex: 1 0 calc(33.333% - 20px);*/
+	align-items: center;
+	justify-content: center;
+	margin: 50px 0;
+}
+.work_title{
+	font-size: 20px;
+	margin: 10px 0;
+	text-align: center;
+	font-weight: 500;
+}
+.work_description{
+	font-size: 18px;
+	font-weight: 400;
+	margin: 10px 0;
+	text-align: center;
+
+}
+.advantage_description{
+	font-size: 24px;
+	font-weight: 500;
+	margin: 10px 0;
+	text-align: center;
+}
+.work{
+	background-color: #FFBB00;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	padding: 10px;
+}
+.work img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.work_number{
+	position: absolute;
+	top: -50%;
+	left: -100%;
+	font-size: 115px;
+	color: rgba(170, 170, 170, .2);
+	font-weight: 500;
+	z-index: -1;
+}
+.rewiew{
+	/*max-width: 300px;*/
+	border-radius: 8px;
+	filter: drop-shadow(0 0 5px rgba(0,0,0,.2));
+	background-color: #fff;
+	padding: 20px;
+	font-size: 15px;
+	/*height: 158px;*/
+	overflow:hidden;
+	margin: 2vmin 4vmin;
+	outline: none;
+	cursor: grab;
+
+}
+.rewiew_person{
+	/*display: inline-block;*/
+	color: #000;
+	font-weight: 500;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.rewiew_person a{
+	color: #000;
+	transition: .3s all ease;
+}
+.rewiew_person a:hover{
+	color: #fff;
+	transition: .3s all ease;
+}
+.slick-dots li{
+	background-color: #fb0;
+	border: 3px solid #fb0;
+	border-radius: 50%;	
+	width: 15px!important;
+    height: 15px!important;
+}
+.slick-dots .slick-active{
+	background-color: rgba(0,0,0,0);
+	border-radius: 50%;	
+}
+.slick-dots li button:before{
+	color: rgba(0,0,0,0)!important;
+}
+.contacts{
+	background-image: url(../img/ios-vs-android-security-03-blog.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 100px 0;
+}
+.form_row{
+	justify-content: center;
+	margin: 50px 0;
+}
+.form_row input{
+	border: none;
+	outline: none;
+	margin: 10px;
+	padding: 10px 20px;
+	border-radius: 8px;
+	filter: drop-shadow(0 0 5px rgba(0,0,0,.1));
+	font-weight: 400;
+	font-size: 24px;
+	color: #AAAAAA;
+}
+footer{
+	background-color: #e9e200;
+}
+.footer_row{
+	justify-content: space-around;
+	padding: 70px 0;
+}
+@keyframes bg_anim{
+	from{
+		background-position: left;
+	}
+	to{
+		background-position: right;
+	}
+}
+@media (max-width: 1599px) {
+	h1{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 50px;
+	color: white;
+}
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	color: white;
+}
+}
+
+@media (max-width: 1366px) {
+	.device_category{
+		flex-direction: row;
+		justify-content: space-around;
+		width: 100%;
+	}
+}
+@media (max-width: 1190px) {
+	.device_photo{
+		display: none;
+	}
+	.device_photo_info{
+		margin: auto;
+	}
+	.device_repairs_price p {
+    	padding: 14px;
+	}
+	.container_1366{
+		width: 94%;
+	}
+	.ios{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height:100%;
+	background-image: url(../img/ios_devices.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	transition: .3s all ease;
+	z-index: 10;
+	animation: bg_anim 10s linear alternate infinite;
+}
+.android{
+	position: absolute;
+	top: 80%;
+	left: 0%;
+	width: 100%;
+	min-height:100%;
+	background-image: url(../img/android_devices.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	transition: .3s all ease;
+	z-index:11;
+	animation: bg_anim 10s linear alternate infinite;
+
+}
+.mask1, .mask2{
+background-color: rgba(255, 221, 0, 1);	
+/*z-index: 999;*/
+}
+.mask2{
+	z-index: 9999;
+}
+.ios_title, .android_title{
+	position: absolute;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 12vmin;
+	top: 5vh;
+	left: 50%;
+	transform: translateY(0%) translateX(-50%) rotate(0deg);
+	transition: .3s all ease;
+	z-index: 99999;
+}
+.ios_title{
+	/*left: 4.5%;*/
+	opacity: 0;
+}
+.android_title{
+	/*left: 5%;*/
+	opacity: 1;
+}
+header{
+		display: none;
+	}
+.main_text{
+		left: 0;
+		padding: 0px 25px 35px 25px;
+		width: 100%;
+		max-width: 100%;
+		top: 0vh;
+	}
+.mob_menu{
+	margin: 20px 0;
+	color: #fff;
+}	
+.mob_menu .row{
+	align-items: center;
+}
+.mob_menu .menu_link{
+	padding: 10px 10px 10px 0;
+}
+.mob_menu .mob_phone{
+	padding: 0 20px;
+}
+	
+}
+
+@media(max-width: 767px){
+	.device_category{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.category{
+		margin: 10px;
+	}
+	.device_repairs_price{
+		flex-wrap: nowrap;
+	}
+	.device_repairs_price p {
+    	font-size: 3.8vmin;
+	}
+	.device_repairs .col{
+		width: 100%;	
+	}
+	.footer_row{
+		font-size: 15px;
+		text-align: center;
+	}
+	.footer_row *{
+		padding: 5px;
+	}
+	.title p{
+		font-size: 30px;
+	}
+	.price_title p{
+		font-size: 30px;
+	}
+	.rewiew_person{
+		font-size: 15px;
+	}
+	section{
+		padding: 20px 0;
+	}
+	.advantage{
+		transform: scale(.8);
+		margin: 10px 0;
+	}
+}
+@media(max-width: 500px){
+	h1{
+		font-size: 25px;
+	}
+	h2{
+		font-size: 18px;
+	}
+	
+	
+
+}
